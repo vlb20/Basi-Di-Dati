@@ -1,0 +1,31 @@
+Un’azienda di viaggio vuole realizzare una piattaforma informatica che consenta la prenotazione di particolari pacchetti turistici.
+Si suppone che per ogni **PACCHETTO** offerto, identificato da un codice e caratterizzato dal numero di persone per cui è pensato, 
+siano previste diverse possibili combinazioni di **SPOSTAMENTI** e **SOGGIORNI**
+(ad esempio, lo spostamento in areo Napoli Aeroporto-Budapest Aeroporto; lo spostamento con navetta Budapest Aeroporto - Budapest Hotel; 
+soggiorno di 10 giorni a Budapest nell’hotel “KVARA”; spostamento con taxi Budapest Hotel-Praga Hotel; soggiorno di 3 giorni a Praga nell’hotel “OSHIMEN”; etc.). 
+Per ogni spostamento bisogna memorizzare il luogo di partenza, il luogo di arrivo, le coordinate gps di entrambi i luoghi, le date di partenza e arrivo (con i relativi orari) 
+ed il **MEZZO DI TRASPORTO** previsto (areo, treno, bus, metropolitana navetta, taxi, etc.), ciascuno con assegnato tempo di percorrenza (espresso in ore), 
+il numero di viaggiatori e di mezzi necessari al trasporto, ed infine il relativo prezzo. Per ciascun soggiorno bisogna ovviamente memorizzare l'**ALBERGO** scelto 
+con il relativo nome, la tipologia, le date di check-in e check-out ed il costo giornaliero. Inoltre, sempre per i soggiorni, si vogliono memorizzare tutte le informazioni 
+relative all’insieme di **CAMERE** prenotate per quel particolare soggiorno, ovvero la tipologia di camera, il numero di occupanti ed i servizi offerti
+(es. wifi gratuito, bagno privato, colazione, etc). E' necessario poi tenere traccia delle **PRENOTAZIONI** (indentificate da un codice) ai pacchetti effettuate
+con unico nominativo **UTENTE** (identificati dal Codice Fiscale e caratterizzati da un nome e cognome) con gli spostamenti e soggiorni selezionati, 
+il costo complessivo, la data di partenza e di ritorno, e la registrazione esplicita del nominativo di ciascuno degli altri utenti viaggiatori. 
+Infine, ogni utente che prenota un pacchetto dovrà selezionare un particolare **METODO DI PAGAMENTO (CARTA DI CREDITO e BONIFICO BANCARIO)**:
+per la carta di credito occorre fornire i dati di quest’ultima (circuito gestire, codice, Intestatario e data di scadenza), mentre per il bonifico dovrà essere 
+controllato che questo sia effettuato prima delle data di partenza.
+Si progetti a base di dati della piattaforma in grado supportare le funzionalità descritte (prenotazione pacchetti), 
+più alcune utili a supportare analisi di tipo statistiche (es. numero di pacchetti col numero maggiore di prenotati, ecc.). 
+Ovviamente l’inserimento delle informazioni riguardanti i possibili pacchetti è di competenza dell’azienda.
+Ogni team di progetto effettui:
+
+- la progettazione concettuale, logica e fisica della base di dati utilizzando come DBMS una qualsiasi distribuzione ORACLE,
+  giustificando laddove necessario le scelte di progetto;
+- la definizione di opportuni indici per velocizzare l’esecuzione delle operazioni, 
+  della tipologia di controllo di concorrenza più idoneo per il caso in esame e di apposite strategie di backup, 
+  recovery e replicazione atte a garantire l’affidabilità del sistema di basi di dati;
+- l’implementazione in SQL di stored procedure, query, viste e trigger (es. seganalazione di un’anomalia quando il giorno prima della partenza gli utenti che hanno scelto 
+  il pagamento mediante bonifico non hanno ancora effettuato il saldo) che si ritengono necessari all’esecuzione delle operazioni richieste;
+- (facoltativo) l’implementazione in un qualsiasi linguaggio di programmazione (es. java, php, apsx, c#, visual basic, c++, swift, android, ecc.) 
+  di interfacce utente (es. web-based, desktop o mobile) per l’esecuzione di alcune operazioni sulla base di dati; nel caso di applicazione web il team 
+  di progetto potrà anche utilizzare il tool Oracle Application Express.
